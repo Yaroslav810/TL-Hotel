@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHotel", "Hotel\SimpleHotel.csproj", "{AA3CA634-25A7-4720-8364-67DD79A5EB1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8} = {57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelLib", "HotelLib\HotelLib.csproj", "{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA3CA634-25A7-4720-8364-67DD79A5EB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3CA634-25A7-4720-8364-67DD79A5EB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3CA634-25A7-4720-8364-67DD79A5EB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3CA634-25A7-4720-8364-67DD79A5EB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57532EC9-93C8-4EE7-8C87-9C88DB2BC3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {559D30EA-E7C9-466F-9A4C-6AFE5CE39013}
+	EndGlobalSection
+EndGlobal
