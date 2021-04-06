@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace HotelLib
 {
-    public class BusinessRoom : IRoom
+    public class Room : IRoom
     {
         private int _price;
         private int _square;
+        private string _type;
         private List<string> _facilities;
 
-        public BusinessRoom(int price, int square, List<string>? facilities)
+        public Room(string type, int price, int square, List<string>? facilities)
         {
             _price = price;
             _square = square;
+            _type = type;
             _facilities = new List<string>();
             if (facilities != null)
             {
@@ -53,7 +55,7 @@ namespace HotelLib
         {
             get
             {
-                return "business";
+                return "suite";
             }
         }
 
@@ -62,22 +64,22 @@ namespace HotelLib
             _facilities.AddRange(facilities);
         }
 
-        public string GetFacilities()
+        public string? GetFacilities()
         {
             string output = "";
-            int count = _facilities.Count;
 
             foreach (string facilitie in _facilities)
             {
                 output += "\"" + facilitie + "\"" + " ";
             }
 
-            return output;
+            return (output == "") ? null : output;
         }
 
         public override string ToString()
         {
-            return $"Price: {_price}; Type: business; Facilities: { GetFacilities() }";
+            string? facilities = GetFacilities();
+            return $"Price: {_price}; Type: {_type}({_square} m^2); Facilities: " + ( facilities ?? "not specified" );
         }
     }
 }

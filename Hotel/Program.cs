@@ -16,20 +16,20 @@ namespace SimpleHotel
 
             List<IRoom> rooms = new List<IRoom>()
             {
-                new StandartRoom( 600, 18, new List<string>() { 
+                new Room( "standart", 600, 18, new List<string>() { 
                     "TV", 
                     "Wi-Fi", 
                     "Air conditioning" 
                 } ),
-                new StandartRoom( 400, 18, null ),
-                new BusinessRoom( 800, 24, new List<string>() { 
+                new Room( "standart", 400, 18, null ),
+                new Room( "business", 800, 24, new List<string>() { 
                     "TV set", 
                     "Orthopedic mattress", 
                     "Wi-Fi", 
                     "Phone", 
                     "Bathrobe" 
                 } ),
-                new SuiteRoom( 1200, 48, new List<string>() { 
+                new Room( "suite", 1200, 48, new List<string>() { 
                     "Upholstered furniture (sofa and 2 armchairs)", 
                     "Fridge", 
                     "Upholstered armchair",
@@ -41,6 +41,7 @@ namespace SimpleHotel
 
             IHotel hotel = new Hotel( "Space" );
             hotel.AddRooms( rooms );
+            rooms[1].Square = 22;
             hotel.ShowRooms();
 
             Console.WriteLine("-----   -----   -----");
